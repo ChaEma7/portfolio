@@ -1,0 +1,524 @@
+/* ---------- root variables ---------- */
+:root {
+  --bgc: #e7e3e2;
+  --f1: #909090;
+  --f2: #404040;
+  --f3: #f257a0;
+  --f4: #f2c2c6;
+  --f5: #add9d4;
+  --f6: #03658c;
+}
+
+/* ======================================= user agent stylesheet ======================================= */
+:-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) h1 {
+  margin-block-start: 1em;
+  margin-block-end: 0em;
+}
+
+/* ======================================= General styling ======================================= */
+
+html {
+  font-family: Segoe UI, sans-serif;
+  height: 100%;
+  text-align: center;
+  color: var(--f2);
+}
+
+body {
+  margin: auto;
+  background-color: var(--bgc);
+  padding: 0 3em;
+}
+
+#bg-billede {
+  position: fixed;
+  z-index: -9999;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: blakely, sans-serif;
+  font-size: 3em;
+  color: var(--f2);
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-weight: 400;
+}
+
+
+figure {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* ===================================== nav styling ===================================== */
+
+nav {
+  display: none;
+}
+
+/* ======================================= page styling ======================================= */
+.page {
+
+  /*min-heigh er screen-heigh minus højde af tab and top bar */
+  min-height: calc(100vh - 110px);
+  animation: fadeIn 0.4s;
+  /* padding bestemmer højden på tabbar and topbar */
+  padding: 30px 0 10px 0;
+  overflow: hidden;
+}
+
+/* ------------- sideskift animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/*============================== grid container styling =============================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.beskrivelse {
+  display: none;
+}
+
+.fremvisning {
+  display: none;
+}
+
+/* ======================================= Om mig ======================================= */
+
+/* ---------- billeder ---------------*/
+
+.billede-mobil {
+  height: 300px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#velkomst-billede-mobil {
+  background-image: url(../img/b1n.png);
+}
+
+#info-billede-motivation {
+  background-image: url(../img/analyserende.png);
+}
+
+
+/* ======================================================================================= */
+/* ===================================== MEDIA QUERY ===================================== */
+/* ======================================================================================= */
+
+@media (min-width: 950px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3em;
+    flex-wrap: wrap;
+    background-color: var(--bgc);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+  }
+
+  .logo {
+    font-family: blakely, sans-serif;
+    font-size: 3em;
+    color: var(--f2);
+    text-align: left;
+    z-index: 10000;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    width: 250px;
+  }
+
+  .billede-mobil {
+    display: none;
+  }
+
+  /* page styling ======================================= */
+  .page {
+    /*min-heigh er screen-heigh minus højde af tab and top bar */
+    min-height: calc(100vh - 100px);
+    animation: fadeIn 0.4s;
+    /* padding bestemmer højden på tabbar and topbar */
+    padding: 100px 0 10px 0;
+    overflow: hidden;
+  }
+
+  /*  nav styling ===================================== */
+  nav {
+    display: block;
+    z-index: 9999;
+    text-align: right;
+    width: 350px;
+    text-align: center;
+  }
+
+  nav ul li {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    padding: 0 0.5em 2px 0.5em;
+    font-size: 1.5em;
+    font-family: blakely, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--f2);
+  }
+
+
+  nav ul li.active a {
+    color: var(--f3);
+    transition: 0.3s;
+  }
+
+  .nav-link:hover {
+    color: var(--f6);
+  }
+
+  ul {
+    padding-inline-start: 0px;
+}
+
+
+
+
+  /* Social icon styling ===================================== */
+
+  .social-icon-top {
+    display: flex;
+    justify-content: flex-end;
+    width: 250px;
+  }
+
+  .social-icon-top a {
+    padding: 0 1em 2px 0;
+  }
+
+  .social {
+    height: 2em;
+    width: 2em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  .sIN {
+    background-image: url(../img/linkedin.png);
+  }
+
+  .sIN:hover {
+    background-image: url(../img/linkedin2.png);
+  }
+
+  .sINSTA {
+    background-image: url(../img/insta.png);
+  }
+
+  .sINSTA:hover {
+    background-image: url(../img/insta2.png);
+  }
+
+  .sMAIL {
+    background-image: url(../img/mail.png);
+  }
+
+  .sMAIL:hover {
+    background-image: url(../img/mail2.png);
+  }
+
+  /* grid-container styling =============================== */
+
+  .grid-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 0.6fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 1em 1em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "beskrivelse beskrivelse fremvisning fremvisning fremvisning fremvisning"
+      "beskrivelse beskrivelse fremvisning fremvisning fremvisning fremvisning";
+  }
+
+  .beskrivelse {
+    display: block;
+    grid-area: beskrivelse;
+    align-self: flex-start;
+    justify-self: center;
+  }
+
+  .fremvisning {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1.4fr 1.4fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". emne1 emne1 ."
+      "emne2 billede billede emne4"
+      "emne6 billede billede emne5";
+    grid-area: fremvisning;
+  }
+
+  .billede {
+    grid-area: billede;
+  }
+
+  .emne1 {
+    grid-area: emne1;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .emne2 {
+    grid-area: emne2;
+    align-self: center;
+    justify-self: flex-end;
+  }
+
+  .emne4 {
+    grid-area: emne4;
+    align-self: center;
+    align-self: center;
+  }
+
+  .emne5 {
+    grid-area: emne5;
+    align-self: center;
+    justify-self: flex-start;
+  }
+
+  .emne6 {
+    grid-area: emne6;
+    align-self: center;
+    justify-self: flex-start;
+  }
+
+  .forklaring {
+    grid-area: forklaring;
+  }
+
+
+
+
+  /* ---------- Velkomst billede ---------------*/
+
+  #velkomst-billede {
+    height: 500px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Hover =============================== */
+
+  #udforsk {
+    display: block;
+  }
+
+
+  .firstLetter {
+    color: var(--f3);
+  }
+
+  .fl {
+    font-size: 1.5em;
+    font-family: blakely, sans-serif;
+    ;
+  }
+
+  .hoverInfo {
+    display: none; 
+    height: 500px;
+    width: 500px;
+    background-image: url(../img/beskrivBlobLR.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+  }
+
+  .hoverInfo .beskriv-text {
+    padding: 10% 60px 0 60px;
+  }
+
+  .beskriv-text p {
+    text-align: left;
+    font-size: 14pt;
+
+  }
+
+  /* ---------- hover font ---------------*/
+
+  #emne2:hover {
+    font-size: 2.7em;
+    font-family: ccmonstermash, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+  #farverig .beskriv-text h3 {
+    font-size: 3em;
+    font-family: ccmonstermash, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+  #emne1:hover {
+    font-size: 2.5em;
+    line-height: 43px;
+    font-family: typeka, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--f3);
+  }
+
+  #analyserende .beskriv-text h3 {
+    font-size: 2em;
+    line-height: 43px;
+    font-family: typeka, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--f3);
+  }
+
+
+  #emne4:hover {
+    font-size: 3em;
+    font-family: p22-stanyan, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+  #glad .beskriv-text h3 {
+    font-size: 3em;
+    font-family: p22-stanyan, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+  #emne5:hover {
+    font-size: 2.1em;
+    line-height: 40px;
+    font-family: decoy, serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+  #empatisk .beskriv-text h3 {
+    font-size: 2.1em;
+    margin-top: 10px;
+    line-height: 40px;
+    font-family: decoy, serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+  #emne6:hover {
+    font-size: 3.2em;
+    line-height: 50px;
+    font-family: desire-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+  #ansvar .beskriv-text h3 {
+    font-size: 3.2em;
+    line-height: 50px;
+    margin-top: 10px;
+    font-family: desire-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--f6);
+  }
+
+
+
+  .infogrid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+    grid-template-rows: 1fr;
+    gap: 1em 1em;
+    grid-template-areas:
+      ". ommig motivation .";
+  }
+
+  .omMig-text {
+    grid-area: ommig;
+    text-align: left;
+    padding: 50px 40px 0 40px;
+  }
+  .omMig-text h2 {
+    text-align: center;
+  }
+
+  .motivations-text {
+    grid-area: motivation;
+    text-align: left;
+    padding: 50px 40px 0 40px;
+  }
+
+  .motivations-text h2 {
+    text-align: center;
+  }
+
+
+}

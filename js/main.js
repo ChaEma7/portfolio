@@ -97,3 +97,5 @@ function changeEmne6(isHover) {
         document.getElementById('udforsk').style.display = "block";
     }
 }
+
+

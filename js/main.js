@@ -1,21 +1,3 @@
-// let current_url = document.location;
-//     document.querySelectorAll(".nav-bar .nav-link").forEach(function(e){
-//        if(e.href == current_url){
-//           e.classList += " current";
-//        }
-//     });
-
-// const navLink = document.getElementById('.nav-link');
-
-// window.onscroll = function() {
-//     var top = window.scrollY;
-//     console.log(top);
-//     if (top < 1100) {
-//         navLink.classList.add('active')
-//     } else if() {
-//         navLink.classList.remove('active');
-//     }
-// }
 
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll("nav ul li");

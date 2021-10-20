@@ -229,7 +229,7 @@ header {
 }
 
 .omMig-text {
-  width: 700px;
+  width: 600px;
   text-align: left;
   padding: 2em;
 }
@@ -282,12 +282,6 @@ header {
 }
 
 
-.project-grid>div img {
-  max-width: 70%;
-  height: auto;
-}
-
-
 .project-grid>div figure a {
   align-self: center;
   font-weight: 700;
@@ -305,13 +299,24 @@ header {
 }
 
 
-
 .project-grid>div .item-kasse {
   background-size: cover;
   justify-self: center;
 }
 
 .project-grid>div #item1 {
+  background-image: url(../img/podCutMockUp.png);
+}
+
+.project-grid>div #item2 {
+  background-image: url(../img/kildehunden.png);
+}
+
+.project-grid>div #item3 {
+  background-image: url(../img/podCutMockUp.png);
+}
+
+.project-grid>div #item4 {
   background-image: url(../img/podCutMockUp.png);
 }
 
@@ -382,6 +387,23 @@ header {
   padding: 0 2em 0 2em;
 }
 
+.project-grid>div .prototype-knap {
+  display: block;
+  color: var(--f3);
+  background-color: var(--f4);
+  width: 100px;
+  padding: 0.5em 1em 0.6em 1em;
+  box-shadow: 2px 4px 5px 0 var(--f5);
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  z-index: 100000;
+}
+
+.project-grid>div img {
+  max-width: 60%;
+  height: auto;
+}
 
 
 
@@ -797,6 +819,7 @@ header {
   .project-grid>div figcaption {
     background-color: #f257a0a6;
     height: 20%;
+    width: 100%;
     padding: 0.5em 0 0 0;
     display: none;
     transition: 0.5s;
@@ -821,6 +844,16 @@ header {
     text-align: left;
     padding-left: 1em;
     margin-top: 5em;
+  }
+
+  .project-grid>div figure .long-title {
+    margin-top: 6.5em;
+    font-size: 0.8em;
+  }
+
+  .project-grid>div figure .long-title-kategori {
+    font-size: 0.8em;
+    margin-left: -0.4em;
   }
   
   .project-grid>div figure .porfolio-kategori {

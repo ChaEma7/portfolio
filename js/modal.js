@@ -1,7 +1,7 @@
 const portfolioContainer = document.querySelector('.all-portfolio-items')
 
 portfolioContainer.addEventListener('click', e => {
-    // console.log(e)
+    console.log(e)
     e.preventDefault();
 
     const modalToggle = e.target.closest('.portfolio-link');
@@ -17,19 +17,4 @@ portfolioContainer.addEventListener('click', e => {
          modal.classList.remove('is-open')
      })
 
-        // if (modal) {
-        //     document.getElementById('item1').style.display = "block";
-        //     document.getElementById('item2').style.display = "block";
-        // } else {
-        //     document.getElementById('item1').style.display = "none";
-        //     document.getElementById('item2').style.display = "none";
-        // }
-
-        // closeButton.addEventListener('click', _ => {
-        //     if (modal) {
-        //         document.getElementById('item1').style.display = "none";
-        //     } else {
-        //         document.getElementById('item1').style.display = "block";
-        //     }
-        // })
 })

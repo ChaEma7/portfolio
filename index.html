@@ -44,12 +44,12 @@
 
         <img id="bg-billede" src="img/bg.png" alt="">
 
-
+<!--=================================================== om MIG =================================================================-->
         <section id="omMig" class="page">
             <section id="velkomst" class="grid-container">
                 <article class="beskrivelse">
                     <article id="udforsk">
-                        <img src="img/udforsk.png" alt="">
+                        <img class="udforsk" src="img/udforsk.png" alt="">
                     </article>
                     <article id="analyserende" class="hoverInfo">
                         <article class="beskriv-text">
@@ -122,7 +122,7 @@
                     </article>
                     <article class="emne2">
                         <h3 id="emne2" onmouseover="changeEmne2(true)" onmouseout="changeEmne2(false)">
-                            Faverig og Fantasifuld</h3>
+                            Faverig og <br> Fantasifuld</h3>
 
                     </article>
 
@@ -131,11 +131,11 @@
                             Smilende</h3>
                     </article>
                     <article class="emne5">
-                        <h3 id="emne5" onmouseover="changeEmne5(true)" onmouseout="changeEmne5(false)">Empatisk og
+                        <h3 id="emne5" onmouseover="changeEmne5(true)" onmouseout="changeEmne5(false)">Empatisk og <br>
                             Forstående</h3>
                     </article>
                     <article class="emne6">
-                        <h3 id="emne6" onmouseover="changeEmne6(true)" onmouseout="changeEmne6(false)">Ihærdig og
+                        <h3 id="emne6" onmouseover="changeEmne6(true)" onmouseout="changeEmne6(false)">Ihærdig og <br>
                             Ansvarsfuld</h3>
                     </article>
 
@@ -146,9 +146,9 @@
                 </div>
             </section>
 
-            <article class="infogrid">
+            <article class="flex">
 
-                <article class="omMig-text">
+                <figure class="omMig-text">
                     <figure class="billede-mobil" id="velkomst-billede-mobil"></figure>
                     <h2>Mit navn er Chalotte Dyrholm </h2>
                     <p>Jeg er 30 år. Bor i Silkeborg og studerer multimedie design på Erhvervsakademi Aarhus. <br> Lige
@@ -159,129 +159,297 @@
                         giver den bedste oplevelse.
 
                     </p>
-                </article>
-                <article class="motivations-text">
+                </figure>
+
+                <figure class="omMig-text">
                     <figure class="billede-mobil" id="info-billede-motivation"></figure>
                     <h2>Min motivation</h2>
-                    <p>Læring og udvikling er mine helt store motivationsfaktorer. Jeg vil gerne være med til at
+                    <p>
+                        Læring og udvikling er mine helt store motivationsfaktorer. Jeg vil gerne være med til at
                         udvikle løsninger for nyopstartet, små og mellemstore virksomheder. Og vil derfor gerne
                         arbejde med så mange aspekter indenfor mit fag som muligt.
                         <br><br>
-                        At tage ved lære fra andres erfaringer er for mig den bedste indlæringsmetode. Det er
+                        Jeg trives i tætte teams. Det er
                         derfor vigtigt for mig, at blive en del af et dynamisk og uformelt team, hvor vi kan lære af
-                        hinanden og sammen nå det fælles mål.
+                        hinandens erfaringer og sammen nå det fælles mål.
+                        <br><br>
+                        Strukturet arbejde med varierende arbejdsopgaver er det, som får mig ud af sengen om morgenen.
                     </p>
-                </article>
+                </figure>
 
             </article>
+
+            <article class="kompetancer">
+                <h1>Kompetancer</h1>
+                <article class="flex">
+                    <figure class="kompFig">
+                        <figcaption>Programmering</figcaption>
+                        <br>
+                        <img class="kompB" src="img/programmering.png" alt="Programmerings sprog">
+                    </figure>
+                    <figure class="kompFig">
+                        <figcaption>UI/UX</figcaption>
+                        <br>
+                        <img class="kompB" src="img/UXUI.png" alt="UI/UX">
+                    </figure>
+                    <figure class="kompFig">
+                        <br>
+                        <figcaption>Design</figcaption>
+                        <img class="kompB" src="img/design.png" alt="Programmerings sprog">
+                    </figure>
+                </article>
+            </article>
         </section>
+
+        <!--=================================================== PORTFOLIO =================================================================-->
 
         <section id="portfolio" class="page">
             <h1>Portfolio</h1>
 
             <div class="all-portfolio-items">
                 <div class="project-grid">
-                    <!-- Portfolio item 1-->
-                    <div class="portfolio-item">
 
-                        <div class="projekt-kasse">
-                            <img class="mockups" src="img/podCutMockUp.png">
-                            <h2 class="portfolio-title">PodCut</h2>
-                            <h4>Single Page Application</h4>
-                            <a class="portfolio-link" href="#"> Læs mere </a>
-                        </div>
+                    
 
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
 
-                        <!-- Portfolio modal 1-->
-                        <div class="portfolio-modal">
-                            <button class="modal-close"></button>
-                            <div class="modal-grid">
-                                <img class="mockup1" src="img/podCutMockUp.png">
-                                <img class="mockup2" src="img/podCutMockUp.png">
-                                <div class="modal-stats">
+                            <figure class="item-kasse item1" id="item1">
+                                <figcaption>
+                                    <a class="portfolio-link" href="#"> Læs mere </a>
                                     <h2 class="portfolio-title">PodCut</h2>
-                                    <h4>Single Page Application</h4>
-                                    <p>
-                                        <strong>Mål:</strong> Konceptudvikling af en SPA<br>
-                                        <strong>Deadline:</strong> 30 dage<br>
-                                        <strong>Team:</strong> Jeg og 1 medstuderende<br>
-                                        <strong>Primære ansvar:</strong> Fælles ansvarsområder
-                                    </p>
+                                    <h4 class="porfolio-kategori">Single Page Application</h4>
+                                </figcaption>
+
+                                <!-- Portfolio modal 1-->
+                                <div class="portfolio-modal">
+                                    <button class="modal-close"></button>
+                                    <div class="modal-grid">
+                                        <img class="mockup1" src="img/podCutMockUp.png">
+                                        <img class="mockup2" src="img/podCutMockUp.png">
+                                        <div class="modal-stats">
+                                            <h2 class="title">PodCut</h2>
+                                            <h4>Single Page Application</h4>
+                                            <p>
+                                                <strong>Mål:</strong> Konceptudvikling af en SPA<br>
+                                                <strong>Deadline:</strong> 30 dage<br>
+                                                <strong>Team:</strong> Jeg og 1 medstuderende<br>
+                                                <strong>Primære ansvar:</strong> Fælles ansvarsområder
+                                            </p>
+                                        </div>
+                                        <div class="modal-beskrivelse">
+                                            <h3>Beskrivelse</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-beskrivelse">
-                                    <h3>Beskrivelse</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor sit
-                                        amet,
-                                        consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor
-                                        sit
-                                        amet,
-                                        consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor
-                                        sit
-                                        amet,
-                                        consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit
-                                    </p>
-                                </div>
-                            </div>
+                            </figure>
                         </div>
 
-                        <!-- /modal-->
-                    </div>
 
-                    <!-- Portfolio item 1-->
-                    <div class="portfolio-item" id="portfolio-modal">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
 
-                        <div class="projekt-kasse">
-                            <img class="mockups" src="img/interesserF.png">
-                            <h2 class="portfolio-title">PodCut</h2>
-                            <h4>Single Page Application</h4>
-                            <a class="portfolio-link" href="#"> Læs mere </a>
-                        </div>
-
-
-                        <!-- Portfolio modal 1-->
-                        <div class="portfolio-modal">
-                            <button class="modal-close"></button>
-                            <div class="modal-grid">
-                                <img class="mockup1" src="img/interesserF.png">
-                                <img class="mockup2" src="img/interesserF.png">
-                                <div class="modal-stats">
+                            <figure class="item-kasse item2" id="item2">
+                                <figcaption>
+                                    <a class="portfolio-link" href="#"> Læs mere </a>
                                     <h2 class="portfolio-title">PodCut</h2>
-                                    <h4>Single Page Application</h4>
-                                    <p>
-                                        <strong>Mål:</strong> Konceptudvikling af en SPA<br>
-                                        <strong>Deadline:</strong> 30 dage<br>
-                                        <strong>Team:</strong> Jeg og 1 medstuderende<br>
-                                        <strong>Primære ansvar:</strong> Fælles ansvarsområder
-                                    </p>
+                                    <h4 class="porfolio-kategori">Single Page Application</h4>
+                                </figcaption>
+
+                                <!-- Portfolio modal 1-->
+                                <div class="portfolio-modal">
+                                    <button class="modal-close"></button>
+                                    <div class="modal-grid">
+                                        <img class="mockup1" src="img/podCutMockUp.png">
+                                        <img class="mockup2" src="img/podCutMockUp.png">
+                                        <div class="modal-stats">
+                                            <h2 class="title">PodCut</h2>
+                                            <h4>Single Page Application</h4>
+                                            <p>
+                                                <strong>Mål:</strong> Konceptudvikling af en SPA<br>
+                                                <strong>Deadline:</strong> 30 dage<br>
+                                                <strong>Team:</strong> Jeg og 1 medstuderende<br>
+                                                <strong>Primære ansvar:</strong> Fælles ansvarsområder
+                                            </p>
+                                        </div>
+                                        <div class="modal-beskrivelse">
+                                            <h3>Beskrivelse</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-beskrivelse">
-                                    <h3>Beskrivelse</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor sit
-                                        amet,
-                                        consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor
-                                        sit
-                                        amet,
-                                        consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum dolor
-                                        sit
-                                        amet,
-                                        consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit
-                                    </p>
-                                </div>
-                            </div>
+                            </figure>
                         </div>
 
-                        <!-- /modal-->
-                    </div>
+
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+
+                            <figure class="item-kasse item3" id="item3">
+                                <figcaption>
+                                    <a class="portfolio-link" href="#"> Læs mere </a>
+                                    <h2 class="portfolio-title">PodCut</h2>
+                                    <h4 class="porfolio-kategori">Single Page Application</h4>
+                                </figcaption>
+
+                                <!-- Portfolio modal 1-->
+                                <div class="portfolio-modal">
+                                    <button class="modal-close"></button>
+                                    <div class="modal-grid">
+                                        <img class="mockup1" src="img/podCutMockUp.png">
+                                        <img class="mockup2" src="img/podCutMockUp.png">
+                                        <div class="modal-stats">
+                                            <h2 class="title">PodCut</h2>
+                                            <h4>Single Page Application</h4>
+                                            <p>
+                                                <strong>Mål:</strong> Konceptudvikling af en SPA<br>
+                                                <strong>Deadline:</strong> 30 dage<br>
+                                                <strong>Team:</strong> Jeg og 1 medstuderende<br>
+                                                <strong>Primære ansvar:</strong> Fælles ansvarsområder
+                                            </p>
+                                        </div>
+                                        <div class="modal-beskrivelse">
+                                            <h3>Beskrivelse</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+
+
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+
+                            <figure class="item-kasse item4" id="item4">
+                                <figcaption>
+                                    <a class="portfolio-link" href="#"> Læs mere </a>
+                                    <h2 class="portfolio-title">PodCut</h2>
+                                    <h4 class="porfolio-kategori">Single Page Application</h4>
+                                </figcaption>
+
+                                <!-- Portfolio modal 1-->
+                                <div class="portfolio-modal">
+                                    <button class="modal-close"></button>
+                                    <div class="modal-grid">
+                                        <img class="mockup1" src="img/podCutMockUp.png">
+                                        <img class="mockup2" src="img/podCutMockUp.png">
+                                        <div class="modal-stats">
+                                            <h2 class="title">PodCut</h2>
+                                            <h4>Single Page Application</h4>
+                                            <p>
+                                                <strong>Mål:</strong> Konceptudvikling af en SPA<br>
+                                                <strong>Deadline:</strong> 30 dage<br>
+                                                <strong>Team:</strong> Jeg og 1 medstuderende<br>
+                                                <strong>Primære ansvar:</strong> Fælles ansvarsområder
+                                            </p>
+                                        </div>
+                                        <div class="modal-beskrivelse">
+                                            <h3>Beskrivelse</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit Lorem
+                                                ipsum
+                                                dolor
+                                                sit
+                                                amet,
+                                                consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer
+                                                adipiscing
+                                                elit
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+
+                        
+
+
+                   
                 </div>
             </div>
+
+<!--=================================================== KONTAKT =================================================================-->
         </section>
 
         <section id="kontakt" class="page">

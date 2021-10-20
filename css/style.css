@@ -27,7 +27,6 @@ html {
 body {
   margin: auto;
   background-color: var(--bgc);
-  padding: 0 3em;
 }
 
 #bg-billede {
@@ -60,7 +59,10 @@ h3 {
   font-size: 2em;
   margin-block-start: 0em;
   margin-block-end: 0em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   font-weight: 400;
+
 }
 
 h4 {
@@ -78,8 +80,13 @@ figure {
   display: block;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin-inline-start: 0em;
+  margin-inline-end: 0em;
+}
+
+figcaption {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 a {
@@ -89,10 +96,52 @@ a {
 }
 
 /* ===================================== nav styling ===================================== */
+header {
+  display: block;
+  background-color: var(--bgc);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+}
 
-nav {
+.logo {
   display: none;
 }
+
+  nav {
+    display: block;
+    z-index: 9999;
+    text-align: right;
+    text-align: center;
+  }
+
+  nav ul li {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    padding: 0 0.5em 2px 0.5em;
+    font-size: 1.5em;
+    font-family: blakely, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--f2);
+  }
+
+
+  nav ul li.active a {
+    color: var(--f3);
+    transition: 0.3s;
+  }
+
+
+  ul {
+    padding-inline-start: 0px;
+  }
 
 /* ======================================= page styling ======================================= */
 .page {
@@ -134,6 +183,10 @@ nav {
 
 /* ======================================= Om mig ======================================= */
 
+.udforsk {
+  width: 90%;
+}
+
 /* ---------- billeder ---------------*/
 
 .billede-mobil {
@@ -152,6 +205,39 @@ nav {
   background-image: url(../img/analyserende.png);
 }
 
+.kompetancer {
+  margin-top: 7em;
+}
+
+.flex {
+  display: flex;
+  margin: 3em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.5s;
+}
+
+.kompB {
+  height: 90%;
+}
+
+.kompFig {
+  height: 300px;
+  width: 300px;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.omMig-text {
+  width: 700px;
+  text-align: left;
+  padding: 2em;
+}
+
+.omMig-text h2 {
+  text-align: center;
+}
+
 /* ======================================= Portfolio ======================================= */
 
 .project-grid {
@@ -162,42 +248,38 @@ nav {
 }
 
 .project-grid>div {
+  justify-self: center;
+}
+
+.project-grid>div figure {
   display: block;
   border: 5px solid var(--f1);
-  padding: 2em 2em;
   cursor: pointer;
   text-align: center;
+  justify-self: center;
+  height: 14em;
+  width: 14em;
 }
 
 
-.project-grid>div:hover {
+
+.project-grid>div:hover figure {
   box-shadow: 0 8px 16px 0 var(--f2);
   border: 5px solid var(--f3);
   transition: 0.3s;
   background-color: var(--bgc);
 }
 
-.project-grid>div h2 {
-  font-size: 2em;
-  color: var(--f2);
-  text-align: left;
+.project-grid>div figcaption {
+  background-color: #f257a0a6;
+  height: 100%;
+  transition: 0.5s;
+  display: none;
 }
 
- .project-grid>div:hover h2 {
-  color: var(--f3);
+.project-grid>div:hover figcaption {
+  display: block;
 }
-
-.project-grid>div:hover h4 {
-  color: var(--f3);
-} 
-
-.project-grid>div:hover .modal-grid .modal-stats h4 {
-  color: var(--f1);
-} 
-
-.project-grid>div:hover .modal-grid .modal-stats h2 {
-  color: var(--f2);
-} 
 
 
 .project-grid>div img {
@@ -205,12 +287,41 @@ nav {
   height: auto;
 }
 
-.project-grid>div h4 {
-  color: var(--f1);
-  text-align: left;
+
+.project-grid>div figure a {
+  align-self: center;
+  font-weight: 700;
+  color: transparent;
+  text-decoration: underline;
+  padding: 38% 0;
 }
 
+.project-grid>div figure .portfolio-title {
+  display: none;
+}
+
+.project-grid>div figure .porfolio-kategori {
+  display: none;
+}
+
+
+
+.project-grid>div .item-kasse {
+  background-size: cover;
+  justify-self: center;
+}
+
+.project-grid>div #item1 {
+  background-image: url(../img/podCutMockUp.png);
+}
+
+
+
+
 /* =================================== Portfolio Modal =================================== */
+
+
+
 
 .portfolio-modal {
   position: fixed;
@@ -249,30 +360,27 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   text-align: left;
-} 
+}
 
 .modal-grid img {
   padding: 1em 0 0 0;
-} 
+}
 
 .mockup1 {
   justify-self: center;
- }
- 
- .mockup2 {
-   justify-self: center;
-  }
+}
+
+.mockup2 {
+  justify-self: center;
+}
 
 .modal-grid>.modal-stats {
   padding: 0 2em;
-} 
+}
 
 .modal-grid>.modal-beskrivelse {
-  padding:  0 2em 0 2em;
-} 
-
-
-
+  padding: 0 2em 0 2em;
+}
 
 
 
@@ -283,6 +391,36 @@ nav {
 /* ======================================================================================= */
 
 @media (min-width: 960px) {
+
+  body {
+    padding: 0 2em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 2em;
+  
+  }
+  
+  h4 {
+    font-size: 1.2em;
+  }
+
+  figcaption {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  a {
+    z-index: 20;
+  }
 
   header {
     display: flex;
@@ -310,6 +448,7 @@ nav {
     margin-inline-end: 0px;
     font-weight: bold;
     width: 250px;
+    display: block;
   }
 
   .billede-mobil {
@@ -362,7 +501,7 @@ nav {
 
   ul {
     padding-inline-start: 0px;
-}
+  }
 
 
 
@@ -469,7 +608,7 @@ nav {
   .emne4 {
     grid-area: emne4;
     align-self: center;
-    align-self: center;
+    justify-self: flex-start;
   }
 
   .emne5 {
@@ -481,7 +620,9 @@ nav {
   .emne6 {
     grid-area: emne6;
     align-self: center;
-    justify-self: flex-start;
+    justify-self: flex-end;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px
   }
 
   .forklaring {
@@ -519,7 +660,7 @@ nav {
   }
 
   .hoverInfo {
-    display: none; 
+    display: none;
     height: 500px;
     width: 500px;
     background-image: url(../img/beskrivBlobLR.png);
@@ -629,91 +770,136 @@ nav {
     color: var(--f6);
   }
 
+   /* kompetancer =============================== */
 
-
-  .infogrid {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
-    grid-template-rows: 1fr;
-    gap: 1em 1em;
-    grid-template-areas:
-      ". ommig motivation .";
+  .kompB {
+    height: 95%;
   }
 
-  .omMig-text {
-    grid-area: ommig;
-    text-align: left;
-    padding: 50px 40px 0 40px;
-  }
-  .omMig-text h2 {
-    text-align: center;
+  .kompFig {
+    height: 400px;
+    width: 400px;
+    padding: 1em;
+    margin-bottom: 5em;
   }
 
-  .motivations-text {
-    grid-area: motivation;
-    text-align: left;
-    padding: 50px 40px 0 40px;
-  }
-
-  .motivations-text h2 {
-    text-align: center;
-  }
-
+   /* Portforlio =============================== */
 
   .project-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .project-grid>div figure {
+    height: 18em;
+    width: 18em;
+  }
+
+  .project-grid>div figcaption {
+    background-color: #f257a0a6;
+    height: 20%;
+    padding: 0.5em 0 0 0;
+    display: none;
+    transition: 0.5s;
+  }
+  
+  .project-grid>div:hover figcaption {
+    display: block;
+  }
+
+  .project-grid>div figure a {
+    align-self: center;
+    font-weight: 700;
+    color: var(--bgc);
+    text-decoration: underline;
+    padding: 0;
+  }
+  
+  .project-grid>div figure .portfolio-title {
+    display: block;
+    color: var(--f3);
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1em;
+    margin-top: 5em;
+  }
+  
+  .project-grid>div figure .porfolio-kategori {
+    display: block;
+    color: var(--f3);
+    font-size: 0.5em;
+    text-align: left;
+    padding-left: 2em;
+  }
+
   /* Portfolio Modal =================================== */
 
-.portfolio-modal {
-  top: 7em;
-  bottom: 5em;
-  right: 10em;
-  left: 10em;
-  transition: 0.5s;
-}
+  .portfolio-modal {
+    top: 5em;
+    bottom: 5em;
+    right: 10em;
+    left: 10em;
+    transition: 0.5s;
+  }
 
-.modal-close {
-  top: 7em;
-  left: 10.5em;
-  transition: 0.5s;
-}
+  .modal-close {
+    top: 5em;
+    left: 10.5em;
+    transition: 0.5s;
+  }
 
-.modal-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} 
+  .modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-.modal-grid img {
-  padding: 2em 0 0 0;
-} 
+  .modal-grid img {
+    padding: 2em 0 0 0;
+  }
 
-.mockup1 {
-  justify-self: flex-end;
- }
- 
- .mockup2 {
-   justify-self: flex-start;
+  .mockup1 {
+    justify-self: flex-end;
+  }
+
+  .mockup2 {
+    justify-self: flex-start;
   }
 
   .modal-grid>.modal-stats {
     padding: 0 0 0 5em;
-  } 
-  
+  }
+
   .modal-grid>.modal-beskrivelse {
-    padding:  0 5em 0 0;
+    padding: 0 5em 0 0;
     margin-left: -10em;
-  } 
+  }
 
 }
 
 @media (max-width: 1400px) and (min-width: 950px) {
- 
+
+  body {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 2em;
+  
+  }
+  
+  h4 {
+    font-size: 1.2em;
+  }
+
   .portfolio-modal {
-    top: 7em;
+    top: 5em;
     bottom: 5em;
     right: 5em;
     left: 5em;
@@ -721,16 +907,42 @@ nav {
   }
 
   .modal-close {
-    top: 7em;
+    top: 5em;
     left: 4.5em;
     transition: 0.5s;
   }
 
   .modal-grid>.modal-beskrivelse {
-    padding:  0 5em 0 0;
+    padding: 0 5em 0 0;
     margin-left: 0em;
-  } 
+  }
+ 
 
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin-top: 3em;
+  }
   
+  .project-grid>div figure {
+    display: block;
+    border: 5px solid var(--f1);
+    cursor: pointer;
+    text-align: center;
+    height: 26em;
+    width: 26em;
+  }
+
+  .project-grid>div figure .portfolio-title {
+    display: block;
+    color: var(--f3);
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1em;
+    margin-top: 8.5em;
+  }
+
 
 }
